@@ -7,4 +7,4 @@ jobs:
       - name: echo
         run: echo "Hello world"
       - name: current DIR
-        run:pwd
+        run: pwd
