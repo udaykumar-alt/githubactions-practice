@@ -1,5 +1,5 @@
 name: workflow-1
-on: workflow_dispatch
+on: push
 jobs: 
   job1: 
     runs-on: ubuntu-latest
@@ -7,4 +7,4 @@ jobs:
       - name: echo
         run: echo "Hello world"
       - name: current DIR
-        run: pwd
+        run:pwd
