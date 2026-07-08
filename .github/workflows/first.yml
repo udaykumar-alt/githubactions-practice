@@ -4,7 +4,7 @@ jobs:
   job1: 
     runs-on: ubuntu-latest
     steps:
-      - name: echo
+      - name: echos
         run: echo "Hello world"
       - name: current DIR
         run: pwd
