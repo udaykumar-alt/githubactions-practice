@@ -17,7 +17,7 @@ jobs:
      - name: display Date
        run: date
     windows-job:
-     needs: [linux-job , Linux-job]
+     needs: [linux-job , Linux-job1]
      runs-on: windows-latest
      steps:
      - name: Display list of files
