@@ -1,0 +1,22 @@
+name: dockers
+on: workflow_dispatch
+jobs: 
+  job1:
+    env:
+      image_name: docker.io/udaykumar207/test5image 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download code
+      run: |
+           git clone https://github.com/udaykumar-alt/githubactions-practice.git
+           ls -l 
+    - name: Image builds
+      run: |
+           docker info
+           cd githubactions-practice
+           docker build -t $image_name  .
+           docker images
+    - name: 
+      run: |
+         docker login -u udaykumar207 -p ${{secrets.dockerpassword}}
+         docker push $image_name 
