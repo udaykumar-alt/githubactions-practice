@@ -1,0 +1,12 @@
+name: tags
+on: 
+  push:
+    tags: 
+    - 'v*'
+jobs:
+   job1:
+     runs-on: ubuntu-latest
+     steps:
+     - name: This is testing
+       run: |
+          echo "Testing"
