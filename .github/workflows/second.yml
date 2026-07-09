@@ -1,0 +1,23 @@
+name: workflow -3
+on: workflow_dispatch
+jobs:
+    linux-job:
+     runs-on: ubuntu-latest
+     steps: 
+     - name:
+       run: |
+            pwd
+            echo "This is test step"
+     - name: checking docker version
+       run:  docker info
+    Linux-job1:
+     needs: linux-job
+     runs-on: ubuntu-latest
+     steps:
+     - name: display Date
+       run: date
+    windows-job:
+     runs-on: windows-latest
+     steps:
+     - name: Display list of files
+       run:  dir
