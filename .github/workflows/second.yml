@@ -11,6 +11,7 @@ jobs:
      - name: checking docker version
        run:  docker info
     Linux-job1:
+     needs: linux-job
      runs-on: ubuntu-latest
      steps:
      - name: display Date
