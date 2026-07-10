@@ -2,10 +2,10 @@ name: githubpackages
 on: push
 jobs:
     job1:
-      runs-on: ububtu-latest
+      runs-on: ubuntu-latest
       steps:
       - name: checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
       - name: image build
         run: |
               docker build -t ghcr.io/${{ github.actor }}/myapp:latest .
