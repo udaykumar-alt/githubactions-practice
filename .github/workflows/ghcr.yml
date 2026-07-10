@@ -1,0 +1,16 @@
+name: githubpackages
+on: push
+jobs:
+    job1:
+      runs-on: ububtu-latest
+      steps:
+      - name: checkout
+        uses: actions/checkout@v7
+      - name: image build
+        run: |
+              docker build -t ghcr.io/${{ github.actor }}/myapp:latest .
+              docker images
+      - name: github push
+        run: |
+            docker login -u ${{github.actor}} -p $((secrets.Github tokenn}}
+            docker push ghcr.io/${{ github.actor }}/myapp:latest
