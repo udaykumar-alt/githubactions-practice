@@ -1,5 +1,8 @@
 name: githubpackages
 on: push
+permissions:
+    contents: read
+    packages: write
 jobs:
     job1:
       runs-on: ubuntu-latest
