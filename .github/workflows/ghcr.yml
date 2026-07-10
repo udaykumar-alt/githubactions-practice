@@ -12,5 +12,5 @@ jobs:
               docker images
       - name: github push
         run: |
-            docker login -u ${{github.actor}} -p $((secrets.Github tokenn}}
+            docker login ghcr.io -u "${{ github.actor }}" -p "${{ secrets.GITHUB_TOKEN }}"
             docker push ghcr.io/${{ github.actor }}/myapp:latest
