@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: concurrency
         run: |
-          echo "Today's date is:"
+          echo "Today's date is::"
           date
