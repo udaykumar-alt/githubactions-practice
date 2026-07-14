@@ -7,7 +7,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: concurrencyy
+      - name: concurrencyyy
         run: |
           echo "Today's date is::"
           date
