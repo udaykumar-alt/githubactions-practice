@@ -2,7 +2,7 @@ name: concurrency
 on: push
 concurrency:
   group: mbapp
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -12,3 +12,8 @@ jobs:
           echo "Today's date:"
           date
           sleep 50
+         
+          
+          
+          
+          
