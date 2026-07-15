@@ -1,0 +1,13 @@
+name: concurrency
+on: push
+concurrency:
+  group: mbapp
+  cancel-in-progress: true
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: concurrency
+        run: |
+          echo "Today's date:"
+          date
