@@ -11,4 +11,4 @@ jobs:
         run: |
           echo "Today's date:"
           date
-          sleep 40
+          sleep 50
